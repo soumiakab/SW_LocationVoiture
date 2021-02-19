@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://kit.fontawesome.com/ebe1dbdd6a.js" crossorigin="anonymous"></script>
+	 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Poppins', sans-serif;
+		}
+		.navcont{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 100;
+      left: 0%;
+    }
+.navcont a{
+      display: flex;
+      flex-direction: row;
+      text-decoration: none;
+      background: #fff;
+      color: #9f01ea;
+      text-transform: uppercase;
+      padding: 15px 0 15px 10px;
+
+      margin: 15px 0;
+      width: 250px;
+      letter-spacing: 1.5px;
+      box-shadow: 2px 2px 16px 0px rgba(0,0,0,0.75); 
+      position: relative;
+      margin-left: -180px;
+      transition: 0.5s ease;
+    }
+    .navcont a span{
+      float: right;
+      width: 70px;
+      height: 100%;
+      line-height: 50px;
+      text-align: center;
+      color: #fff;
+      background-color: #56d8e4;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+    }
+    .navcont a span i{
+      font-size: 20px;
+    }
+    .navcont a:hover{
+      margin-left: 0;
+    }
+		section{
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: cover;
+		}
+	 #slider{
+			position: absolute; 
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		section  .navigation{
+			position: absolute;
+			bottom: 60px;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 100;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		section  .navigation li img{
+			width: 100%;
+			height: 100%;
+			border: 4px solid #FFF;
+			border-radius: 4px;
+			cursor: pointer;
+
+		}
+		section h2{
+			position: relative;
+			z-index: 100;
+			font-size: 4em;
+			color:#fff; 
+			text-align: center;
+			max-width: 1000px;
+			text-shadow: 0 5px  10px rgba(0,0,0,0.2);
+
+		}
+		section  .navigation li {
+			list-style: none;
+			margin: 10px;
+			width: 20px;
+    		height: 20px;
+			cursor: pointer;
+
+		}
+
+		ul.cjoix {
+			 position: absolute;
+		      top: 20%;
+		      transform: translateY(-50%);
+		      z-index: 100;
+		      left: 20%;
+		  		padding: 0;
+ 		 list-style: none;}
+ul.cjoix li {
+  text-align: center;
+  height: 25px;
+  margin: 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+ul.cjoix li span {
+  background-color: #00C430;
+  padding: 5px 10px 5px 10px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+
+	</style>
+</head>
+<body onload="init('moto','images/mt.jpg')">
+	<img src="car2.jpg" id="slider">
+	 <div class="navcont">
+  <a href="index.html">ACUEIL<span><i class="fas fa-home"></i></span></a>
+  <a href="Gallerie.html">GALLERRIE<span><i class="fas fa-images"></i></span></a>
+  <a href="Reservation.html">RESRVATION<span><i class="fas fa-key"></i></span></a>
+  <a href="Contact.html">CONTACTER NOUS<span><i class="fas fa-envelope-open-text"></i></span></a>
+</div>
+
+ <ul class="cjoix">
+      <li onclick="init('moto','images/mt.jpg')"><span>moto</span></li>
+      <li onclick="init('compact','images/COMPACT4.jpg')"><span>compact</span></li>
+      <li onclick='init("citadin","images/CITADINE4.jpg")'><span>citadin</span></li>
+      <li onclick='init("utilitaire","images/UTILITAIRE4.jpg")'><span>utilitaire</span></li>
+      <li onclick='init("berlin","images/BERLINE4.png")'><span>berlin</span></li>
+      <li onclick='init("camion","images/CAMION5.jpg")'><span>camion</span></li>
+      <li onclick='init("engindechantier","images/engine5.jpg")'><span> engin de chantier</span></li>
+    </ul>
+	<section id="moto">
+		
+		<ul class="navigation">
+			<li onclick='imgSlider("images/moto1.jpg")'><img src="car.jpg"></li>  
+			<li onclick="imgSlider('images/moto2.jpg')"><img src="car2.jpg"></li>
+			<li onclick='imgSlider("images/moto3.jpg")'><img src="car2.jpg"></li>
+			<li onclick='imgSlider("images/moto4.jpg")'><img src="car2.jpg"></li>
+			<li onclick='imgSlider("images/moto5.jpg")'><img src="car2.jpg"></li>
+		</ul>
+		
+	</section>
+	<section id="compact">
+		
+		<ul class="navigation">
+			<li onclick='imgSlider("images/COMPACT1.jpg")'><img src="car.jpg"></li>  
+			<li onclick="imgSlider('images/COMPACT2.jpg')"><img src="car2.jpg"></li>
+			<li onclick='imgSlider("images/COMPACT3.jpg")'><img src="car2.jpg"></li>
+			<li onclick='imgSlider("images/COMPACT4.jpg")'><img src="car2.jpg"></li>
+			<li onclick='imgSlider("images/COMPACT5.jpg")'><img src="car2.jpg"></li>
+		</ul>
+		
+		<!-- <h2>SIMPLE IMAGE SLIDER</>h2> -->
+	</section>
+	<section id="citadin">
+		<!-- <img src="car2.jpg" id="slider"> -->
+		<ul class="navigation">
+			<li onclick='imgSlider("images/CITADINE1.jpg")'><img src="car.jpg"></li>  
+			<li onclick="imgSlider('images/CITADINE2.jpg')"><img src="car2.jpg"></li>
+			<li onclick='imgSlider("images/CITADINE3.jpg")'><img src="car2.jpg"></li>
+			<li onclick='imgSlider("images/CITADINE4.jpg")'><img src="car2.jpg"></li>
+			<li onclick='imgSlider("images/CITADINE5.jpg")'><img src="car2.jpg"></li>
+		</ul>
+		
+		<!-- <h2>SIMPLE IMAGE SLIDER</>h2> -->
+	</section>
+	<section id="utilitaire">
+		<!-- <img src="car2.jpg" id="slider"> -->
+		<ul class="navigation">
+			<li onclick='imgSlider("images/UTILITAIRE1.jpg")'><img src="car.jpg"></li>  
+			<li onclick="imgSlider('images/UTILITAIRE2.jpg')"><img src="car2.jpg"></li>
+			<li onclick='imgSlider("images/UTILITAIRE3.jpg")'><img src="car2.jpg"></li>
+			<li onclick='imgSlider("images/UTILITAIRE4.jpg")'><img src="car2.jpg"></li>
+			<li onclick='imgSlider("images/UTILITAIRE5.jpg")'><img src="car2.jpg"></li>
+		</ul>
+		
+		<!-- <h2>SIMPLE IMAGE SLIDER</>h2> -->
+	</section>
+	<section id="berlin">
+		<!-- <img src="car2.jpg" id="slider"> -->
+		<ul class="navigation">
+			<li onclick='imgSlider("images/BERLINE1.jpg")'><img src="car.jpg"></li>  
+			<li onclick="imgSlider('images/BERLINE2.jpg')"><img src="car2.jpg"></li>
+			<li onclick='imgSlider("images/BERLINE3.jpg")'><img src="car2.jpg"></li>
+			<li onclick='imgSlider("images/BERLINE4.png")'><img src="car2.jpg"></li>
+			<li onclick='imgSlider("images/BERLINE5.jpg")'><img src="car2.jpg"></li>
+		</ul>
+		
+		<!-- <h2>SIMPLE IMAGE SLIDER</>h2> -->
+	</section>
+	<section id="camion">
+		<!-- <img src="car2.jpg" id="slider"> -->
+		<ul class="navigation">
+			<li onclick='imgSlider("images/CAMION1.png")'><img src="car.jpg"></li>  
+			<li onclick="imgSlider('images/CAMION2.jpg')"><img src="car2.jpg"></li>
+			<li onclick='imgSlider("images/CAMION3.jpg")'><img src="car2.jpg"></li>
+			<li onclick='imgSlider("images/CAMION4.jpg")'><img src="car2.jpg"></li>
+			<li onclick='imgSlider("images/CAMION5.jpg")'><img src="car2.jpg"></li>
+		</ul>
+		
+	</section>
+	<section id="engindechantier">
+		<ul class="navigation">
+			<li onclick='imgSlider("images/engine1.jpeg")'><img src="car.jpg"></li>  
+			<li onclick="imgSlider('images/engine2.jpg')"><img src="car2.jpg"></li>
+			<li onclick='imgSlider("images/engine3.jpg")'><img src="car2.jpg"></li>
+			<li onclick='imgSlider("images/engine4.jpg")'><img src="car2.jpg"></li>
+			<li onclick='imgSlider("images/engine5.jpg")'><img src="car2.jpg"></li>
+		</ul>
+		
+	</section>
+	<script type="text/javascript">
+		function imgSlider(srcimg) {
+
+			document.getElementById('slider').src=srcimg;
+		
+		}
+		function init(id,src) {
+			
+			var moto=document.getElementById('moto');
+			var compact=document.getElementById('compact');
+			var citadin=document.getElementById('citadin');
+			var utilitaire=document.getElementById('utilitaire');
+			var berlin=document.getElementById('berlin');
+			var camion=document.getElementById('camion');
+			var engindechantier=document.getElementById('engindechantier');
+			moto.style="display:none";
+			compact.style="display:none";
+			citadin.style="display:none";
+			utilitaire.style="display:none";
+			berlin.style="display:none";
+			camion.style="display:none";
+			engindechantier.style="display:none";
+			document.getElementById(id).style="display:block";
+			imgSlider(src);
+
+		}
+		
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+  <script src="https://kit.fontawesome.com/ebe1dbdd6a.js" crossorigin="anonymous"></script>
+  <style type="text/css">
+    *{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+    .navcont{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 100;
+      left: 0%;
+    }
+.navcont a{
+      display: flex;
+      flex-direction: row;
+      text-decoration: none;
+      background: #fff;
+      color: #9f01ea;
+      text-transform: uppercase;
+      padding: 15px 0 15px 10px;
+
+      margin: 15px 0;
+      width: 250px;
+      letter-spacing: 1.5px;
+      box-shadow: 2px 2px 16px 0px rgba(0,0,0,0.75); 
+      position: relative;
+      margin-left: -180px;
+      transition: 0.5s ease;
+    }
+    .navcont a span{
+      float: right;
+      width: 70px;
+      height: 100%;
+      line-height: 50px;
+      text-align: center;
+      color: #fff;
+      background-color: #56d8e4;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+    }
+    .navcont a span i{
+      font-size: 20px;
+    }
+    .navcont a:hover{
+      margin-left: 0;
+    }
+    .logo{
+      position: relative;
+      align-items: center;
+      top: 0.5%;
+      left: 25%;
+        z-index: -1;
+        width: 45%;
+        height: 25%;
+
+    }
+    .accImg{
+      /*width: 100%;
+      height: 100px;
+      background-image: url('img1.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;*/
+      width: 50%;
+      height: 50%;
+      margin: 0;
+      float: right;
+      position: relative;
+
+      border-radius: 50px;
+      z-index: -1;
+
+    }
+    .accparag{
+      text-align: center;
+      position: relative;
+      top: 200px;
+    }
+    .accparag button{
+      border-radius: 10px;
+      color: #fff;
+      background-color:  #56d8e4;
+      font-size: 100%;
+      padding: 20px;
+      cursor: pointer;
+      width: 200px;
+      margin: 5%;
+      border:none;
+    }
+    .promo{
+      position: relative;
+      top: 50px;
+      text-align: center;
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+
+    }
+      .promolist{
+          position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      flex-wrap: wrap;
+    }
+
+      .promolist li img{
+      width: 150px;
+      border: 4px solid #000;
+      border-radius: 4px;
+      cursor: pointer;
+      height: 200px;
+      width: 200px;
+
+    }
+      .promolist li {
+      list-style: none;
+      margin: 10px;
+      cursor: pointer;
+
+
+    }
+    .propos,.dit{
+      position: relative;
+      top: 300px;
+      text-align: center;
+      width: 100%;
+      overflow: hidden;
+
+    }
+    .acc{
+       display: flex;
+    flex-direction: row;
+     margin-left: 20%;
+}
+    }
+.parg{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10% 0 10%;
+    height: 30%;
+    margin-top: 5%;
+    margin-left: 20%;
+   }
+
+.prtext h1{
+    font-size: 6vw;
+    margin: 0 !important;
+}
+
+.prtext h3{
+    margin: 6px !important;
+    font-size: 20px;
+    opacity: 0.3;
+    line-height: 30px;
+}
+
+.prtext .btn{
+    width: 100%;
+    margin-top: 30px;
+    padding: 14px 20px 14px 20px;
+    background-color: #56d8e4;
+    border-radius: 45px;
+    text-align: center;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #a6c9ff;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  background-color: #0366ff;
+}
+.propos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.promocont{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.title {
+  color: grey;
+  padding: 5%;
+}
+.card2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: auto;
+  height: auto;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+}
+
+
+
+  footer{
+    margin-top: 50px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #c4dbff;
+      padding: 5%;
+    }
+    footer ul{
+      list-style-type: none;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 16px;
+
+
+    }
+    footer ul li {
+      color: #2d2b31;
+      margin: 5%;
+    }
+    footer ul li a{
+      text-decoration: none;
+      color: #2d2b31;
+    }
+    #mobile{
+      display: none;
+    }
+@media (max-width: 500px){
+  #web{
+    display: none;
+  }
+
+
+    .acc{
+      position: relative;
+      top: 20%;
+     margin-left: 40%;
+}
+
+.card2 {
+  
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+.title{
+  font-size: small;
+}
+.picabout{
+  position: relative;
+  left: 25%;
+
+}
+
+.parg{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10% 0 10%;
+    height: auto;
+    font-size: small;
+    margin-top: 25%;
+    margin-left: 10%;
+
+}
+.prtext h1{
+  font-size:10vw;
+    margin: 0 !important;
+}
+.prtext h3{
+  font-size:5vw;
+}
+
+}
+
+  </style>
+
+
+
+</head>
+<body>
+  <img src="images/lg.png" alt="logo" class="logo">
+  <div class="navcont">
+  <a href="index.html">ACUEIL<span><i class="fas fa-home"></i></span></a>
+  <a href="Gallerie.html">GALLERRIE<span><i class="fas fa-images"></i></span></a>
+  <a href="Reservation.html">RESRVATION<span><i class="fas fa-key"></i></span></a>
+  <a href="Contact.html">CONTACTER NOUS<span><i class="fas fa-envelope-open-text"></i></span></a>
+</div>
+<!-- <div class="accImg"></div> -->
+<div class="acc">
+
+ <div class="parg">
+  
+            <div class="prtext" >
+              <img src="images/pic1.png" class="accImg" id="mobile" >
+                <h1>Location <span style="color:#e0501b;"> Voiture</span> </h1>
+                <h3 >Juste Chez Nous Les Bon Prix <br> Restez en plein assurance .</h3>
+                <div class="btn">
+                    <a href="Reservation.html" style="text-decoration: none; color:#FFF;font-size: 100%; font-weight: bold; ">Reserver</a>
+                </div>
+            </div>
+        </div>
+         <img src="images/pic1.png" class="accImg" id="web" >
+        </div>
+<div class="promo">
+          <h1  style="color: #e0501b; ">Promo Du Mois</h1>
+
+        <div class="prmoslide">
+            <ul class="promolist">
+              <li onclick='imgSlider("car.jpg")'>
+        <div class="card">
+          <img src="images/car.jpg" alt="Promo Car" style="width:100%">
+          <h1>PROMO</h1>
+          <p class="price">$15.00</p>
+          <p>Disponible</p>
+          <p><button>Reserver</button></p>
+        </div></li>
+              <li onclick="imgSlider('images/car2.jpg')">
+        <div class="card">
+          <img src="images/car.jpg" alt="Promo Car" style="width:100%">
+          <h1>PROMO</h1>
+          <p class="price">$15.00</p>
+          <p>Disponible</p>
+          <p><button>Reserver</button></p>
+        </div></li>
+              <li onclick='imgSlider("images/car.jpg")'>
+        <div class="card">
+          <img src="images/car.jpg" alt="Promo Car" style="width:100%">
+          <h1>PROMO</h1>
+          <p class="price">$15.00</p>
+          <p>Disponible</p>
+          <p><button>Reserver</button></p>
+        </div></li>
+              <li onclick='imgSlider("images/car2.jpg")'>
+        <div class="card">
+          <img src="images/car.jpg" alt="Promo Car" style="width:100%">
+          <h1>PROMO</h1>
+          <p class="price">$15.00</p>
+          <p>Disponible</p>
+          <p><button>Reserver</button></p>
+        </div></li>
+              <li onclick='imgSlider("images/car.jpg")'>
+        <div class="card">
+          <img src="images/car.jpg" alt="Promo Car" style="width:100%">
+          <h1>PROMO</h1>
+          <p class="price">$15.00</p>
+          <p>Disponible</p>
+          <p><button>Reserver</button></p>
+        </div></li>
+            </ul>
+        </div>
+</div>
+
+<h2 style=" font-size: 30px; margin-top: 90px; text-align: center;color: #87b6ff;"><u>A propos de nous</u></h2>
+<div class="card2">
+  <img src="images/lg.png" alt="logo" class="picabout" style="width:50%">
+  <div class="abt">
+  <p class="title">Voyagez en toute liberté et louez une voiture à Casablanca pour partir à la découverte de la Ville Blanche !
+
+Les équipes de notre agence de location de voiture à Casablanca vous proposent une large gamme de véhicules pour tous vos déplacements familiaux, professionnels ou autres. Nous vous proposons aussi bien une citadine pour vous faufiler dans les ruelles marocaines, qu’un véhicule utilitaire ou encore une berline confortable pour faire de longs trajets le long du littoral. Tout équipé, l’ensemble de notre parc automobile est parfaitement entretenu et révisé pour vous assurer un voyage sans anicroche. Située dans le centre-ville de Casablanca et ouverte tous les jours, notre agence de location voiture à Casablanca vous assure un retrait facile et rapide de votre voiture de location. </p>
+  </div>
+</div>
+
+<footer class="pt2 pb2">
+        <div class="container align--center">
+            <p>ULocation site web de location voiture</p>
+            <p>Design by <a href="#" >Kabrane Soumia.</a></p>
+            <ul >
+                <li ><a href="https://www.facebook.com/" ><img src="https://demos.onepagelove.com/html/chippewa/img/facebook.svg" alt="Facebook"></a></li>
+                <li><a href="https://www.twitter.com/" ><img  src="https://demos.onepagelove.com/html/chippewa/img/twitter.svg" alt="Twitter"></a></li>
+                <li><a href="https://www.instagram.com/" ><img src="https://demos.onepagelove.com/html/chippewa/img/instagram.svg" alt="Instagram"></a></li>
+            </ul>
+            <p>&copy; YouCode2021</p>
+        </div>
+    </footer>
+</body>
+</html>

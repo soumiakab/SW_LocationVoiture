@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+  
+      <script src="https://kit.fontawesome.com/ebe1dbdd6a.js" crossorigin="anonymous"></script>
+	<style type="text/css">
+				*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+		.navcont{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 100;
+      left: 0%;
+    }
+.navcont a{
+      display: flex;
+      flex-direction: row;
+      text-decoration: none;
+      background: #fff;
+      color: #9f01ea;
+      text-transform: uppercase;
+      padding: 15px 0 15px 10px;
+
+      margin: 15px 0;
+      width: 250px;
+      letter-spacing: 1.5px;
+      box-shadow: 2px 2px 16px 0px rgba(0,0,0,0.75); 
+      position: relative;
+      margin-left: -180px;
+      transition: 0.5s ease;
+    }
+    .navcont a span{
+      float: right;
+      width: 70px;
+      height: 100%;
+      line-height: 50px;
+      text-align: center;
+      color: #fff;
+      background-color: #56d8e4;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+    }
+    .navcont a span i{
+      font-size: 20px;
+    }
+    .navcont a:hover{
+      margin-left: 0;
+    }
+    .logo{
+    	position: relative;
+    	align-items: center;
+    	top: 0%;
+    	left: 30%;
+      z-index: -1;
+      width: 35%;
+      height: 40%;
+    }
+
+
+
+	footer{
+		margin-top: 50px;
+		position: relative;
+		bottom: 0;
+		left: 0;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: #c4dbff;
+			padding: 5%;
+		}
+		footer ul{
+			list-style-type: none;
+
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			font-size: 16px;
+
+
+		}
+		footer ul li {
+			color: #2d2b31;
+			margin: 5%;
+		}
+		footer ul li a{
+			text-decoration: none;
+			color: #2d2b31;
+		}
+
+
+    #lstimg,.typeCarburant,.typeBtv,.dr,.reserer{
+      list-style-type: none;
+      display: flex;
+
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    #lstimg li{
+      display: flex;
+      flex-direction: row;
+      margin: 5%;
+    }
+    #lstimg li img{
+      width: 270px;
+      height: 183px;
+    }
+
+    #lstimg li a:active +li{
+      border-radius: 5px;
+    }
+
+
+    input[type=radio]{display:none;}
+
+    input[type=radio] + label.btn,.btnres{
+      padding: 5px 10px;
+      margin: 5px 10px;
+      display: inline-block;
+      text-transform: uppercase;
+      font-weight: 700;
+      outline: none;
+      position: relative;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+      background: #98e8ef;
+      color: #fff;
+      box-shadow: 0 6px #98bcef;
+      -webkit-transition: none;
+      -moz-transition: none;
+      transition: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      }
+      input[type=radio] + label.btn:hover,.btnres:hover{
+      box-shadow: 0 4px #EAAEF2;
+      top: 2px;
+      }
+
+      input[type=radio]:checked + label.btn{
+      box-shadow: 0 0 #ab3c3c;
+      top: 6px;
+}
+
+  .num{
+    border-radius: 10px;
+    border:none;
+    outline: 2px dotted red;
+    height: 25px;
+    font-size: 16px;
+    color: red;
+    margin: 12px;
+  }
+  .num:focus{
+    border:none;
+
+    outline: 2px dotted blue;
+    color: blue;
+  }
+
+	</style>
+</head>
+<body onload="remplissage()">
+			<img src="images/lg.png" alt="logo" class="logo">
+	<div class="navcont">
+   <a href="index.html">ACUEIL<span><i class="fas fa-home"></i></span></a>
+  <a href="Gallerie.html">GALLERRIE<span><i class="fas fa-images"></i></span></a>
+  <a href="Reservation.html">RESRVATION<span><i class="fas fa-key"></i></span></a>
+  <a href="Contact.html">CONTACTER NOUS<span><i class="fas fa-envelope-open-text"></i></span></a>
+</div>
+
+    
+
+<ul id="lstimg" style="
+      margin-top: 5%;">
+  
+</ul>
+<div id="zonne">
+
+</div>
+
+
+
+<div class="typeCarburant" id="typeCarburant">
+<input type="radio" id="carb1" name="radio-btns">
+<label for="carb1" class="btn">ELECCTRIQUE</label>
+
+<input type="radio" id="carb2" name="radio-btns">
+<label for="carb2" class="btn">DIESEL</label>
+
+<input type="radio" id="carb3" name="radio-btns">
+<label for="carb3" class="btn">ESSENCE</label>
+</div>
+<br>
+<div class="typeBtv" id="typeBtv">
+<input type="radio" id="btv1" name="btvs">
+<label for="btv1" class="btn">Manuelle</label>
+
+<input type="radio" id="btv2" name="btvs">
+<label for="btv2" class="btn">Automatique</label>
+</div>
+<br>
+<div class="dr">
+<label for="dure" class="btn">dure</label>
+<input type="number" id="dure" min="1" value="1" class="num" >
+
+</div>
+<div class="reserer">
+  <button id="btnreser" class="btnres" onclick="cal()">Prix</button>
+</div>
+
+
+
+<footer class="pt2 pb2">
+        <div class="container align--center">
+            <p>ULocation site web de location voiture</p>
+            <p>Design by <a href="#" >Kabrane Soumia.</a></p>
+            <ul >
+                <li ><a href="https://www.facebook.com/" ><img src="https://demos.onepagelove.com/html/chippewa/img/facebook.svg" alt="Facebook"></a></li>
+                <li><a href="https://www.twitter.com/" ><img  src="https://demos.onepagelove.com/html/chippewa/img/twitter.svg" alt="Twitter"></a></li>
+                <li><a href="https://www.instagram.com/" ><img src="https://demos.onepagelove.com/html/chippewa/img/instagram.svg" alt="Instagram"></a></li>
+            </ul>
+            <p>&copy; YouCode2021</p>
+        </div>
+    </footer>
+
+
+
+
+<script type="text/javascript">
+    var txt='{"vehicules":[{"type":"moto","img":"images/moto.jpg","carburant":[{"Electrique":5},{"Essence":14}],"boiteavitesse":null,"prcentageb":0,"prxv":10},{"type":"Citadine","img":"images/citadin.jpg", "carburant":[{"Electrique":5},{"Hybride":9},{"Essence":14},{"Diesel":21}],"boiteavitesse":"manuelle","prcentageb":0,"prxv":12},{"type":"Compact","img":"images/compact.jpg", "carburant":[{"Hybride":9},{"Essence":14},{"Diesel":21}],"boiteavitesse":"manuelle","prcentageb":0,"prxv":14},{"type":"Berline","img":"images/berlin.jpg", "carburant":[{"Hybride":9},{"Essence":14},{"Diesel":21}],"boiteavitesse":"Automatique","prcentageb":19,"prxv":20},{"type":"Utilitaire","img":"images/moto.jpg", "carburant":[{"Diesel":21}],"boiteavitesse":"manuelle","prcentageb":0,"prxv":16},{"type":"Engin de chantier","img":"images/engindechantier.jpg", "carburant":[{"Essence":14},{"Diesel":21}],"boiteavitesse":"manuelle","prcentageb":0,"prxv":900},{"type":"camion","img":"images/camion.jpg", "carburant":[{"Diesel":21}],"boiteavitesse":"Automatique","prcentageb":19,"prxv":250}]}';
+  var obj=JSON.parse(txt);
+    
+var imglst = document.getElementById('lstimg');
+var carburantList=document.getElementById('typeCarburant');
+var btvList=document.getElementById('typeBtv');
+var dure=document.getElementById('dure');
+ var prv=0;
+ //var x=obj.vehicules[0].type;
+ for (var i = 0; i <obj.vehicules.length; i++) {
+
+  //var node = document.createElement("LI");
+  var x=i;
+  const node = document.createElement('LI');
+  node.setAttribute("id",x);
+  var a = document.createElement('a');
+  a.setAttribute("href",'#typeCarburant');
+  var img = document.createElement('img');   
+  img.src = obj.vehicules[i].img;
+  a.appendChild(img);
+  node.appendChild(a);
+  imglst.appendChild(node);
+
+
+  node.addEventListener("click", function() {
+
+  myFunction(node.id);
+});
+  
+ }
+
+ function myFunction(x) {
+
+  carburantList.innerHTML="";
+  btvList.innerHTML="";
+
+    for (var i = 0; i < obj.vehicules[x].carburant.length; i++) {
+
+           var radiobox = document.createElement('input');
+            radiobox.type = 'radio';
+            radiobox.name = 'carburants';
+            radiobox.id = 'carb'+i;
+            radiobox.value =Object.values(obj.vehicules[x].carburant[i]);
+            var label = document.createElement('label');
+            label.htmlFor = 'carb'+i;
+            label.setAttribute("class",'btn');
+            carburantList.appendChild(radiobox);
+            var crbtype=Object.keys(obj.vehicules[x].carburant[i]);
+
+            var n = document.createTextNode(crbtype);
+            label.appendChild(n);
+            carburantList.appendChild(label);
+    }
+
+  
+           var radiobox = document.createElement('input');  
+            radiobox.type = 'radio';
+            radiobox.name = 'bav';
+            radiobox.id = 'btv'+i;
+            radiobox.value = obj.vehicules[x].prcentageb;
+            var label = document.createElement('label');
+           
+            var btvType=obj.vehicules[x].boiteavitesse;
+             var n = document.createTextNode(btvType);
+            if(btvType !=null){
+            label.htmlFor = 'btv'+i;
+            label.setAttribute("class",'btn');
+            btvList.appendChild(radiobox);
+           
+            label.appendChild(n);
+            btvList.appendChild(label);
+            }
+            prv=obj.vehicules[x].prxv;
+
+
+
+  }
+//Prix total = (prix de véhicules + percentage carburant + percentage boite à vitesse)*durée de réservation
+            
+  function cal() {
+    validation();
+    var prixt=0;
+    var prbv=0
+    var prc=document.querySelector('input[name="carburants"]:checked').value;
+    if(prv !=10){
+      prbv=document.querySelector('input[name="bav"]:checked').value;
+  }
+ 
+    prixt=(prv+ (prc*100/prv) + (prbv*100/prv))*dure.value;
+    alert(prixt+" $");
+  }
+
+
+  function validation() {
+     var carcheck=document.querySelector('input[name="carburants"]:checked');
+     
+    if(prv==0){alert('veuillez choisir un type de vehicules');}
+    else{
+    if(carcheck == null) { 
+                alert('veuillez choisir type carburant');
+            } 
+   if(prv !=10){
+     var btvcheck=document.querySelector('input[name="bav"]:checked');
+     if(btvcheck == null ) { 
+                alert('veuillez choisir type boite a vitesse');
+            } 
+            }
+   }
+    
+  }
+  </script>
+
+</body>
+</html>

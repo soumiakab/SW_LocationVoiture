@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple HTML Form</title>
+
+    <script src="https://kit.fontawesome.com/ebe1dbdd6a.js" crossorigin="anonymous"></script>
+    <style type="text/css">
+                *{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+        body {
+    font-size: 16px;
+    background: #f9f9f9;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+    .navcont{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 100;
+      left: 0%;
+    }
+.navcont a{
+      display: flex;
+      flex-direction: row;
+      text-decoration: none;
+      background: #fff;
+      color: #9f01ea;
+      text-transform: uppercase;
+      padding: 15px 0 15px 10px;
+
+      margin: 15px 0;
+      width: 250px;
+      letter-spacing: 1.5px;
+      box-shadow: 2px 2px 16px 0px rgba(0,0,0,0.75); 
+      position: relative;
+      margin-left: -180px;
+      transition: 0.5s ease;
+    }
+    .navcont a span{
+      float: right;
+      width: 70px;
+      height: 100%;
+      line-height: 50px;
+      text-align: center;
+      color: #fff;
+      background-color: #56d8e4;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+    }
+    .navcont a span i{
+      font-size: 20px;
+    }
+    .navcont a:hover{
+      margin-left: 0;
+    }
+    .logo{
+            position: relative;
+        align-items: center;
+        top: 0%;
+      z-index: -1;
+      width: 25%;
+      height: 15%;
+
+
+    }
+h2 {
+    text-align: center;
+    text-decoration: underline;
+    color: #39A1FF;
+}
+form {
+
+  box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+    width: 60%;
+    background: #fff;
+    padding: 15px 40px 40px;
+    border: 1px solid #ccc;
+    margin: 50px auto 0;
+    border-radius: 5px;
+}
+label {
+    display: block;
+    margin-bottom: 5px
+}
+label i {
+    color: #999;
+    font-size: 80%;
+}
+input,textarea {
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+.row {
+    padding-bottom: 10px;
+}
+.form-inline {
+    border: 1px solid #ccc;
+    padding: 8px 10px 4px;
+    border-radius: 2px;
+}
+.form-inline label, .form-inline input {
+    display: inline-block;
+    width: auto;
+    padding-right: 15px;
+}
+.error {
+    color: red;
+    font-size: 90%;
+}
+input[type="submit"] {
+    font-size: 110%;
+    font-weight: 100;
+    background: #56d8e4;
+    box-shadow: 0 3px 0 #0165b6;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background: #0165b6;
+}
+
+footer{
+        margin-top: 20%;
+        position: relative;
+        bottom: 0;
+        left: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #c4dbff;
+            padding: 5%;
+        }
+        footer ul{
+            list-style-type: none;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 16px;
+
+
+        }
+        footer ul li {
+            color: #2d2b31;
+            margin: 5%;
+        }
+        footer ul li a{
+            text-decoration: none;
+            color: #2d2b31;
+        }
+
+
+
+
+
+
+    </style>
+    <script src="validator.js"></script>
+</head>
+<body>
+    <img src="images/lg.png" alt="logo" class="logo">
+    <div class="navcont">
+   <a href="index.html">ACUEIL<span><i class="fas fa-home"></i></span></a>
+  <a href="Gallerie.html">GALLERRIE<span><i class="fas fa-images"></i></span></a>
+  <a href="Reservation.html">RESRVATION<span><i class="fas fa-key"></i></span></a>
+  <a href="Contact.html">CONTACTER NOUS<span><i class="fas fa-envelope-open-text"></i></span></a>
+</div>
+<form name="contactForm" onsubmit="validateForm()" >
+    <h2>Contacter Nous</h2>
+    <div class="row">
+        <label>Nom</label>
+        <input type="text" name="name">
+        <div class="error" id="nameErr"></div>
+    </div>
+    <div class="row">
+        <label>Email </label>
+        <input type="text" name="email">
+        <div class="error" id="emailErr"></div>
+    </div>
+    <div class="row">
+        <label>Sujet</label>
+        <input type="text" name="sujet" >
+        <div class="error" id="sujetErr"></div>
+    </div> 
+     <div class="row">
+        <label>Message</label>
+        <textarea name="message"></textarea>
+        <div class="error" id="msgErr"></div>
+    </div>       
+    <div class="row">
+        <input type="submit" value="Submit" >
+    </div>
+</form>
+<footer class="pt2 pb2">
+        <div class="container align--center">
+            <p>ULocation site web de location voiture</p>
+            <p>Design by <a href="#" >Kabrane Soumia.</a></p>
+            <ul >
+                <li ><a href="https://www.facebook.com/" ><img src="https://demos.onepagelove.com/html/chippewa/img/facebook.svg" alt="Facebook"></a></li>
+                <li><a href="https://www.twitter.com/" ><img  src="https://demos.onepagelove.com/html/chippewa/img/twitter.svg" alt="Twitter"></a></li>
+                <li><a href="https://www.instagram.com/" ><img src="https://demos.onepagelove.com/html/chippewa/img/instagram.svg" alt="Instagram"></a></li>
+            </ul>
+            <p>&copy; YouCode2021</p>
+        </div>
+    </footer>
+<script type="text/javascript">
+    
+
+    // Defining a function to display error message
+function printError(elemId, hintMsg) {
+    document.getElementById(elemId).innerHTML = hintMsg;
+}
+
+// Defining a function to validate form 
+function validateForm() {
+    // Retrieving the values of form elements 
+    var name = document.contactForm.name.value;
+    var email = document.contactForm.email.value;
+    var sujet = document.contactForm.sujet.value;
+    var message = document.contactForm.message.value;
+    
+    // Defining error variables with a default value
+    var nameErr = emailErr = sujetErr = msgErr = true;
+    
+    // Validate name
+    if(name == "") {
+        printError("nameErr", "Entrer votre Nom");
+    } else {
+        var regex = /^[a-zA-Z\s]+$/;                
+        if(regex.test(name) === false) {
+            printError("nameErr", "SVP entrer un nom valid");
+        } else {
+            printError("nameErr", "");
+            nameErr = false;
+        }
+    }
+    
+    // Validate email address
+    if(email == "") {
+        printError("emailErr", "enterer votre adresse email ");
+    } else {
+        // Regular expression for basic email validation
+        var regex = /^\S+@\S+\.\S+$/;
+        if(regex.test(email) === false) {
+            printError("emailErr", "email invalid");
+        } else{
+            printError("emailErr", "");
+            emailErr = false;
+        }
+    }
+    
+    // Validate mobile number
+    if(sujet == "") {
+        printError("sujetErr", "Ecrire le sujet de votre mesage");
+    } else {
+        var regex = /^[a-zA-Z\s]+$/;
+        if(regex.test(sujet) === false) {
+            printError("sujetErr", "Sujet invalid");
+        } else{
+            printError("sujetErr", "");
+            sujetErr = false;
+        }
+    }
+
+    if(message == "") {
+        printError("msgErr", "Ecrire un mesage");
+    } else {
+        
+        if(message.length<10) {
+            printError("msgErr", "Message tres court");
+        } else{
+            printError("msgErr", "");
+            msgErr = false;
+        }
+      
+    }
+    // Prevent the form from being submitted if there are any errors
+    if((nameErr || emailErr || sujetErr || msgErr ) == true) {
+       
+        event.preventDefault();
+       return false;
+    } else {
+
+        var infos = "Vous avez entrer les informations suivantes: \n" +
+                          "Nom: " + name + "\n" +
+                          "Email : " + email + "\n" +
+                          "Sujet: " + sujet + "\n" +
+                          "Message: " + message + "\n" ;
+
+
+
+        alert(infos);
+       
+    }
+}
+
+
+
+</script>
+</body>
+</html>
